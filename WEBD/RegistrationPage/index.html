@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="akg.png" alt="College Logo" class="logo">
+      <h1>Ajay Kumar Garg Engineering College</h1>
+    </div>
+  </header>
+
+  <div class="form-wrapper">
+    <h2>Student Registration</h2>
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter password" required>
+
+      <label>Email ID</label>
+      <input type="email" placeholder="Enter email" required>
+
+      <label>Phone Number</label>
+      <input type="text" placeholder="Enter phone number" required>
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+      </div>
+
+      <label>Date of Birth</label>
+      <div class="dob-group">
+        <select>
+          <option>Day</option>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<option>${i}</option>`);
+            }
+          </script>
+        </select>
+        <select>
+          <option>Month</option>
+          <option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option>
+          <option>May</option><option>Jun</option><option>Jul</option><option>Aug</option>
+          <option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option>
+        </select>
+        <select>
+          <option>Year</option>
+          <script>
+            for (let i = 1980; i <= 2025; i++) {
+              document.write(`<option>${i}</option>`);
+            }
+          </script>
+        </select>
+      </div>
+
+      <label>Languages Known</label>
+      <div class="checkbox-group">
+        <input type="checkbox"> English
+        <input type="checkbox"> Hindi
+        <input type="checkbox"> French
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
