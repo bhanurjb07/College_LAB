@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sports Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Sports Survey Form</h1>
+    <form id="surveyForm">
+      <label for="name">1. What is your name?</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="age">2. What is your age?</label>
+      <input type="number" id="age" name="age" min="1" max="150" required />
+
+      <label>3. Do you prefer indoor, outdoor, or both types of sports?</label>
+      <div class="radio-group">
+        <input type="radio" id="indoor" name="sports_type" value="Indoor" required />
+        <label for="indoor">Indoor</label>
+
+        <input type="radio" id="outdoor" name="sports_type" value="Outdoor" />
+        <label for="outdoor">Outdoor</label>
+
+        <input type="radio" id="both" name="sports_type" value="Both" />
+        <label for="both">Both</label>
+      </div>
+
+      <label for="fav_watch">4. Which sport do you enjoy watching the most?</label>
+      <input type="text" id="fav_watch" name="fav_watch" required />
+
+      <label for="fav_play">5. Which sport do you enjoy playing the most?</label>
+      <input type="text" id="fav_play" name="fav_play" required />
+
+      <label for="fav_person">6. Who is your favorite sportsperson?</label>
+      <input type="text" id="fav_person" name="fav_person" required />
+
+      <label for="freq_play">7. How often do you participate in sports or physical activities?</label>
+      <select id="freq_play" name="freq_play" required>
+        <option value="" disabled selected>Select frequency</option>
+        <option value="Never">Never</option>
+        <option value="Rarely">Rarely</option>
+        <option value="Sometimes">Sometimes</option>
+        <option value="Often">Often</option>
+        <option value="Always">Always</option>
+      </select>
+
+      <label for="interest">8. On a scale of 1 to 5, how interested are you in sports?</label>
+      <select id="interest" name="interest" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="1">1 - Not Interested</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 - Very Interested</option>
+      </select>
+
+      <label for="importance">9. Why do you think sports are important?</label>
+      <textarea id="importance" name="importance" rows="3" required></textarea>
+
+      <label for="improvements">10. What can be improved about sports programs in your community or school?</label>
+      <textarea id="improvements" name="improvements" rows="3" required></textarea>
+
+      <label>11. Would you recommend playing sports to people of your age group?</label>
+      <select id="recommend" name="recommend" required>
+        <option value="" disabled selected>Select option</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">Maybe</option>
+      </select>
+
+      <label for="feedback">12. Your thoughts or feedback on sports (optional):</label>
+      <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="msg"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
